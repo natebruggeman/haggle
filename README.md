@@ -18,3 +18,6 @@ The buyer starts the transaction process by hitting the purchase button on the l
 Buyers can view the sellers profile from the item description.
 
 The user can view their own profile to manage settings and see their history (records of transactions).
+
+
+![alt text](https://i.imgur.com/vFXjdip.png)
