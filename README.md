@@ -21,3 +21,13 @@ The user can view their own profile to manage settings and see their history (re
 
 
 ![alt text](https://i.imgur.com/vFXjdip.png)
+
+![alt text](https://i.imgur.com/44o8QpP.png)
+
+![alt text](https://i.imgur.com/3Csylx6.png)
+
+![alt text](https://i.imgur.com/ClVbdGW.png)
+
+![alt text](https://i.imgur.com/hvYCDLY.png)
+
+![alt text](https://i.imgur.com/mip7oAr.png)
