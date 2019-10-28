@@ -10,9 +10,10 @@ router.post('/registration', async (req, res) => {
   const hashedPassword= bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 
   const accountDbEntry = {};
+  accountDbEntry.name = req.body.name;
   accountDbEntry.username = req.body.username;
-  accountDbEntry.password = hashedPassword;
   accountDbEntry.email    = req.body.email;
+  accountDbEntry.password = hashedPassword;
 
   // added the user to the db
   const createdAccount = await User.create(accountDbEntry);
@@ -20,7 +21,7 @@ router.post('/registration', async (req, res) => {
   req.session.username = createdAccount.username;
   req.session.logged = true;
 
-  res.redirect('/index.ejs')
+  res.redirect('/sell')
 
 
 })

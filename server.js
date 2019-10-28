@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 const registrationController = require('./controllers/registrationcontroller.js');
 app.use('/auth', registrationController);
 
-const itemcontroller = require('./controllers/itemcontroller.js');
-app.use('/sell', itemcontroller);
+const itemController = require('./controllers/itemcontroller.js');
+app.use('/sell', itemController);
 
 
 app.get('/', (req, res) => {
