@@ -21,7 +21,7 @@ const registrationController = require('./controllers/registrationcontroller.js'
 app.use('/auth', registrationController);
 
 const itemController = require('./controllers/itemcontroller.js');
-app.use('/sell', itemController);
+app.use('/featureditems', itemController);
 
 
 app.get('/', (req, res) => {

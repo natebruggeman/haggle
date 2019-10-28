@@ -8,7 +8,7 @@ const User = require('../models/users.js')
 router.get('/', async (req, res) => {
   try {
     // const foundItems = await Item.find({});
-    res.render('items/sell.ejs', {
+    res.render('items/featureditems.ejs', {
       // Items: foundItems
     })
   } catch(err) {
@@ -19,10 +19,9 @@ router.get('/', async (req, res) => {
 
 
 router.get('/new', (req, res) => {
-  res.render('users/index.ejs');
+  res.render('items/sell.ejs');
 });
 
 
 
 module.exports = router;
-

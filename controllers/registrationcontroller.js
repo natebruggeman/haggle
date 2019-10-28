@@ -21,7 +21,7 @@ router.post('/registration', async (req, res) => {
   req.session.username = createdAccount.username;
   req.session.logged = true;
 
-  res.redirect('/sell')
+  res.redirect('/featureditems')
 
 })
 
