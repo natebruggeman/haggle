@@ -21,10 +21,17 @@ app.use(bodyParser.urlencoded({extended: false}));
 const registrationController = require('./controllers/registrationcontroller.js');
 app.use('/auth', registrationController);
 
+const itemcontroller = require('./controllers/itemcontroller.js');
+app.use('/sell', itemcontroller);
+
+
 app.get('/', (req, res) => {
   res.render('registration.ejs');
  })
 
+app.get('/sell', (req, res) => {
+	res.render('items/sell.ejs')
+})
 
 app.listen(PORT, () => {
 console.log(`Listening on ${PORT}`);
