@@ -23,7 +23,6 @@ router.post('/registration', async (req, res) => {
 
   res.redirect('/sell')
 
-
 })
 
 module.exports = router;

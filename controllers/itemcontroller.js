@@ -1,9 +1,9 @@
 
-// const User = require('../models/users.js')
-
 const express = require('express');
 const router  = express.Router();
 const Item  = require('../models/itemsmodel.js');
+const User = require('../models/users.js')
+
 
 router.get('/', async (req, res) => {
   try {
