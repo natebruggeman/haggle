@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+  </head>
+  <body>
+    <h1>Edit your Profile</h1>
+    <form action="/users/<%=users._id%>?_method=PUT" method="POST">
+      <input type="text" name="name" placeholder="<%=users.name%>"><br>
+      <input type="text" name="username" placeholder="<%=users.username%>"><br>
+      <input type="email" name="email" placeholder="email"><br>
+      <input type="password" name="password" placeholder="password"><br>
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
+<form action="/authors/<%=author._id%>?_method=PUT" method="post">
+      <input type="text" name="name" value="<%=author.name%>"/><br/>
+      <input type="submit" value="Update Author"/>
+    </form>
