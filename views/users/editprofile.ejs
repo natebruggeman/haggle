@@ -13,5 +13,10 @@
       <input type="password" name="password" placeholder="<%=user.password%>"><br>
       <button type="submit">Save Current Changes</button>
     </form>
+    <section>
+      <form action="/users/<%=user._id%>?_method=DELETE" method="POST">
+        <button type="button" name="delete"></button>
+      </form>
+    </section>
   </body>
 </html>

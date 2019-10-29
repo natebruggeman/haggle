@@ -18,7 +18,7 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 const registrationController = require('./controllers/registrationcontroller.js');
-app.use('/', registrationController);
+app.use('/auth', registrationController);
 
 const itemController = require('./controllers/itemcontroller.js');
 app.use('/featureditems', itemController);
@@ -27,9 +27,9 @@ const userController = require('./controllers/usercontroller.js');
 app.use('/profile', userController);
 
 
-
-
-
+app.get('/', (req, res) => {
+  res.render('registration.ejs');
+});
 
 app.listen(PORT, () => {
 console.log(`Listening on ${PORT}`);
