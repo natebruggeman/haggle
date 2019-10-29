@@ -4,16 +4,20 @@
 	<title></title>
 	<h1>Item Name</h1>
 
-	<ul>
-		<li><a href="/"> Sell an Item</a></li>
-	</ul>
-    <ul>
-      <% for (let i = 0; i < items.length; i++){%>
-           <li><%=items[i].title %></li>
-           <li><%=items[i].price %></li>
-           <li><%=items[i].description %></li>
-      <%}%>
-    </ul>
+<h3><%=item.title%></h3>
+<h3>$<%=item.price%></h3>
+<h3><%=item.description%></h3>
+
+   <section>
+      <a href="/featureditems/<%=item.id%>/edit">Edit</a>
+   </section>
+
+   <section>
+   	<form action = "/featureditems/<%= item.id%>?_method=DELETE" method="POST">
+   	<button type="submit">Delete Listing</button>	
+   	</form>
+   </section>
+
 </head>
 <body>
 

@@ -21,8 +21,11 @@
 
       <ul>
         <% for (let i = 0; i < items.length; i++){%>
-             <li><%=items[i].title %></li>
-             <li><%=items[i].price %></li>
+             <li>
+              <a href="/featureditems/<%=items[i]._id%>">
+              <%=items[i].title %>
+             </a></li>
+             <li>$<%=items[i].price %></li>
              <li><%=items[i].description %></li>
         <%}%>
       </ul>
