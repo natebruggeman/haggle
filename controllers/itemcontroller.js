@@ -31,5 +31,21 @@ router.post('/', async (req, res) => {
 	}
 })
 
+// router.get('/:id', async (req, res, next) => {
+// 	try{
+// 		const foundItem = await Item.findById(req.params)
+// 		res.render('items/show.ejs', {
+// 			item: foundItem
+// 		})
+// 	} catch(err) {
+// 		next(err)
+// 	}
+// });
+
+
+
+
+
+
 
 module.exports = router;

@@ -8,10 +8,9 @@
 		<li><a href="/"> Sell an Item</a></li>
 	</ul>
     <ul>
-      <% for (let i = 0; i < items.length; i++){%>
-           <li><%=items[i].title %></li>
-           <li><%=items[i].price %></li>
-           <li><%=items[i].description %></li>
+           <li><%=item[i].title %></li>
+           <li><%=item[i].price %></li>
+           <li><%=item[i].description %></li>
       <%}%>
     </ul>
 </head>
