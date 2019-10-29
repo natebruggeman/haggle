@@ -10,7 +10,13 @@
 
    <section>
       <a href="/featureditems/<%=item.id%>/edit">Edit</a>
-    </section>
+   </section>
+
+   <section>
+   	<form action = "/featureditems/<%= item.id%>?_method=DELETE" method="POST">
+   	<button type="submit">Delete Listing</button>	
+   	</form>
+   </section>
 
 </head>
 <body>

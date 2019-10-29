@@ -68,6 +68,15 @@ router.put('/:id', async (req, res, next) => {
   }
 })
 
+router.delete('/:id', async (req, res) => {
+  try{
+    const deletedItem = await Item.findByIdAndRemove(req.params.id);
+    res.redirect('/featureditems')
+  } catch(err) {
+    next(err)
+  }
+})
+
 
 
 
