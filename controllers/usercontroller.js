@@ -30,5 +30,15 @@ router.get('/:id/edit', (req, res, next) => {
       }
     })
  })
+ 
+ router.put('/:id', (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body, {new: true},(err, updatedUser) => {
+    if(err){
+      res.send(err);
+    } else{
+      res.redirect('/users');
+    }
+  });
+});
 
 module.exports = router;
