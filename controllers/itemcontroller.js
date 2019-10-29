@@ -36,12 +36,10 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const foundItem = await Item.findById(req.params.id)
-    console.log(foundItem);
 
     res.render('items/show.ejs', {
       item: foundItem,
     });
-
   } catch(err) {
     next(err)
   }
@@ -49,11 +47,27 @@ router.get('/:id', async (req, res) => {
 
 router.get('/:id/edit', async (req, res) => {
   try{
-    res.send('yo daddy nate')
+    const foundItem = await Item.findById(req.params.id)
+
+    res.render('items/edit.ejs', {
+      item: foundItem
+    })
   } catch(err) {
     next(err)
   }
 })
+
+router.put('/:id', async (req, res, next) => {
+  try{
+
+    const updateItem = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true})
+
+    res.redirect('/featureditems')
+  } catch(err) {
+    next(err)
+  }
+})
+
 
 
 
