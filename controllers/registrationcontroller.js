@@ -32,6 +32,59 @@ router.post('/registration', async (req, res, next) => {
     res.redirect('/featureditems')
 
 })
+router.post('/login', async (req, res, next) => {
+  try {
+      const foundUser = await User.findOne({username: req.body.username});
+      // if User.findOne returns null/ or undefined it won't throw an error
+      if(foundUser){
+
+          // comparee thier passwords
+          if(bcrypt.compareSync(req.body.password, foundUser.password)){
+            // if true lets log them in
+            // start our session
+            req.session.message = '';
+            // if there failed attempts get rid of the message
+            // from the session
+            req.session.username = foundUser.username;
+            req.session.logged   = true;
+
+            res.redirect('/authors')
+
+
+          } else {
+              // if the passwords don't match
+             req.session.message = 'Username or password is incorrect';
+             res.redirect('/');
+          }
+
+    } else {
+
+      req.session.message = 'Username or password is incorrect';
+      res.redirect('/');
+      // / is where teh form is
+
+
+    }
+    } catch(err){
+  res.send(err);
+  }
+
+
+ })
+
+ router.get('/logout', (req, res) => {
+
+  // creates a brand new cookie, without any of our properties
+  // that we previously added to it
+  req.session.destroy((err) => {
+    if(err){
+      res.send(err);
+    } else {
+      res.redirect('/');
+    }
+  })
+
+})
 
 
 module.exports = router;
