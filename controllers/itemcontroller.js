@@ -31,20 +31,29 @@ router.post('/', async (req, res) => {
 	}
 })
 
-// router.get('/:id', async (req, res, next) => {
-// 	try{
-// 		const foundItem = await Item.findById(req.params)
-// 		res.render('items/show.ejs', {
-// 			item: foundItem
-// 		})
-// 	} catch(err) {
-// 		next(err)
-// 	}
-// });
 
 
+router.get('/:id', async (req, res) => {
+  try {
+    const foundItem = await Item.findById(req.params.id)
+    console.log(foundItem);
 
+    res.render('items/show.ejs', {
+      item: foundItem,
+    });
 
+  } catch(err) {
+    next(err)
+  }
+});
+
+router.get('/:id/edit', async (req, res) => {
+  try{
+    res.send('yo daddy nate')
+  } catch(err) {
+    next(err)
+  }
+})
 
 
 

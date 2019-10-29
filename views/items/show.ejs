@@ -4,15 +4,14 @@
 	<title></title>
 	<h1>Item Name</h1>
 
-	<ul>
-		<li><a href="/"> Sell an Item</a></li>
-	</ul>
-    <ul>
-           <li><%=item[i].title %></li>
-           <li><%=item[i].price %></li>
-           <li><%=item[i].description %></li>
-      <%}%>
-    </ul>
+<h3><%=item.title%></h3>
+<h3><%=item.price%></h3>
+<h3><%=item.description%></h3>
+
+   <section>
+      <a href="/featureditems/<%=item.id%>/edit">Edit</a>
+    </section>
+
 </head>
 <body>
 
