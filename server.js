@@ -18,15 +18,16 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 const registrationController = require('./controllers/registrationcontroller.js');
-app.use('/auth', registrationController);
+app.use('/', registrationController);
 
 const itemController = require('./controllers/itemcontroller.js');
 app.use('/featureditems', itemController);
 
+const userController = require('./controllers/usercontroller.js');
+app.use('/profile', userController);
 
-app.get('/', (req, res) => {
-  res.render('registration.ejs');
- })
+
+
 
 
 
