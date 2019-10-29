@@ -8,7 +8,6 @@ const User = require('../models/users.js')
 router.get('/', async (req, res) => {
   try {
     const foundItems = await Item.find({});
-    console.log(foundItems);
     res.render('items/featureditems.ejs', {
       items: foundItems
     })
