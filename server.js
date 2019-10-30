@@ -32,8 +32,12 @@ app.use('/profile', userController);
 
 
 app.get('/', (req, res) => {
+  res.render('login.ejs');
+});
+app.get('/registration', (req, res) => {
   res.render('registration.ejs');
 });
+
 
 app.listen(PORT, () => {
 console.log(`Listening on ${PORT}`);

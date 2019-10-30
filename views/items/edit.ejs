@@ -5,15 +5,24 @@
 	<h1>Edit <%=item.title%></h1>
 </head>
 <body>
+	<header>
+		<nav>
+			<ul id='navmenu'>
+				<a href="/featureditems">Home</a>
+				<a href="/featureditems/new">Sell</a>
+				<a href="/profile/">Profile</a>
+				<a href="/auth/logout">Logout</a>
+			</ul>
+		</nav>
+	</header>
+	<form action= "/featureditems/<%=item.id%>?_method=PUT" method="POST">
 
-	<form action= "/featureditems/<%=item.id%>?_method=PUT" method="POST">	
-	
 
 	<input type="text" name="title" value="<%=item.title%>"><br/>
 
 	<input type="number" name="price" value="<%=item.price%>"><br/>
 
-	<textarea type="text" name="description" value="<%=item.description%>">		
+	<textarea type="text" name="description" value="<%=item.description%>">
 	</textarea><br/>
 	<button type="submit"> Update Item </button>
 	</form>
