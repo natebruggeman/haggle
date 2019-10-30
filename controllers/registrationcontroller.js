@@ -30,9 +30,9 @@ router.post('/registration', async (req, res, next) => {
 
       req.session.anyProperty = 'any name';
       req.session.isLogged = true;
-      // req.session.userId = 
-      // req.session.username = 
-      
+      // req.session.userId =
+      // req.session.username =
+
       console.log(req.session);
 
       res.redirect('/featureditems');
@@ -109,6 +109,8 @@ router.get('/logout', (req, res) => {
     if (err) {
       res.send(err);
     } else {
+      console.log(req.session);
+      console.log('this is current session');
       res.redirect('/');
     }
   })
