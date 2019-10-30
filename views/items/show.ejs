@@ -36,6 +36,12 @@
 			<button type="submit">Delete Listing</button>
 		</form>
 	</section>
+	<%} else {%>
+
+		<form action = "/featureditems/<%= item.id%>?_method=POST/buy" method="POST">
+			<button type="submit">Buy Now!</button>
+		</form>
+
 	<%}%>
 
 </body>
