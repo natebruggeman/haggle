@@ -9,7 +9,8 @@ router.get('/', async (req, res) => {
   try {
     const foundItems = await Item.find({});
     res.render('items/featureditems.ejs', {
-      items: foundItems
+      items: foundItems,
+      userId: req.session.userId
     })
   } catch(err) {
     res.send(err);
