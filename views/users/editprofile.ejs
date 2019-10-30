@@ -16,7 +16,7 @@
       </nav>
     </header>
     <h1>Edit your Profile</h1>
-    <form action="/users/<%=user._id%>?_method=PUT" method="POST">
+    <form action="/profile/<%=user.id%>?_method=PUT" method="POST">
       <input type="text" name="name" placeholder="<%=user.name%>"><br>
       <input type="text" name="username" placeholder="<%=user.username%>"><br>
       <input type="email" name="email" placeholder="<%=user.email%>"><br>
