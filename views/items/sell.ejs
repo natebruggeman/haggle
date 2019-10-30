@@ -16,9 +16,15 @@
 
 	<form action= "/featureditems" method="POST"><br/>
 		<input type="text" name="title" placeholder="Item"><br/>
+
+		<input type="text" name="seller" value="<%=username%>" readonly><br/>
+
 		<input type="number" name="price" placeholder="List Price"><br/>
+
 		<input type="text" name="image" placeholder="Image URL"><br/>
+
 		<textarea name="description" placeholder="Description (Optional)"></textarea><br/>
+		
 		<input type="submit" value="List Item for Sale">
 	</form>
 </body>

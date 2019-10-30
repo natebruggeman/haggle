@@ -22,7 +22,8 @@ router.get('/new', (req, res) => {
   try{
   
   res.render('items/sell.ejs',{
-    userId: req.session.userId
+    userId: req.session.userId,
+    username: req.session.username
   });
   } catch(err) {
     next(err)
