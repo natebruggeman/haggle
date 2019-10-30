@@ -25,6 +25,8 @@
 	<img src="<%=item.image%>" style= width:225px;height300px>
 	<h3><%=item.description%></h3>
 
+
+	<% if(item.seller === username) {%>
 	<section>
 		<a href="/featureditems/<%=item.id%>/edit">Edit</a>
 	</section>
@@ -34,6 +36,7 @@
 			<button type="submit">Delete Listing</button>
 		</form>
 	</section>
+	<%}%>
 
 </body>
 </html>
