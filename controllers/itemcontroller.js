@@ -10,15 +10,23 @@ router.get('/', async (req, res) => {
     const foundItems = await Item.find({});
     res.render('items/featureditems.ejs', {
       items: foundItems,
-      userId: req.session.userId,
+      userId: req.session.userId
     })
   } catch(err) {
     res.send(err);
   }
 });
 
+
 router.get('/new', (req, res) => {
-  res.render('items/sell.ejs');
+  try{
+  
+  res.render('items/sell.ejs',{
+    userId: req.session.userId
+  });
+  } catch(err) {
+    next(err)
+  }
 });
 
 
@@ -39,6 +47,8 @@ router.get('/:id', async (req, res) => {
 
     res.render('items/show.ejs', {
       item: foundItem,
+      userId: req.session.userId,
+      username: req.session.username
     });
   } catch(err) {
     next(err)
@@ -50,7 +60,8 @@ router.get('/:id/edit', async (req, res) => {
     const foundItem = await Item.findById(req.params.id)
 
     res.render('items/edit.ejs', {
-      item: foundItem
+      item: foundItem,
+      userId: req.session.userId
     })
   } catch(err) {
     next(err)
