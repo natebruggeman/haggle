@@ -58,8 +58,8 @@ router.get('/:id/edit', async (req, res) => {
 
 router.put('/:id', async (req, res, next) => {
   try{
-
     const updateItem = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    console.log(updateItem);
 
     res.redirect('/featureditems')
   } catch(err) {
