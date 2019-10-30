@@ -41,6 +41,7 @@ router.get('/:id/edit', (req, res, next) => {
       next(err);
     } else {
       res.render('users/editprofile.ejs', {
+        userId: req.session.userId,
         user: foundUser
       })
     }
@@ -48,10 +49,7 @@ router.get('/:id/edit', (req, res, next) => {
 })
 
 router.put('/:id', (req, res) => {
-  console.log("this is req.session.userId")
-  console.log(req.session.userId)
-  console.log("this is req.params.id")
-  console.log(req.params.id)
+
   User.findByIdAndUpdate(req.session.userId, req.body, {
     new: true
   }, (err, updatedUser) => {
@@ -62,13 +60,19 @@ router.put('/:id', (req, res) => {
     }
   });
 });
-router.delete('/:id/edit', async (req, res, next) => {
+router.delete('/:id', async (req, res, next) => {
 
   try {
-    const deletedUser = await User.findByIdAndRemove(req.params.id)
+    const deletedUser = await User.findByIdAndRemove(req.session.userId)
     console.log(deletedUser);
-    res.redirect('login.ejs');
-
+    console.log('this is the destroyed user');
+    req.session.destroy((err, next) => {
+      if (err) {
+        next(err);
+      } else {
+        res.redirect('/');
+      }
+    })
   } catch (err) {
       next(err)
     }
