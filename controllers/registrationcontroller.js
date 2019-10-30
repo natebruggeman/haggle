@@ -3,9 +3,6 @@ const router = express.Router();
 const User = require('../models/users.js');
 const bcrypt = require('bcryptjs');
 
-// router.get('/registration', (req, res) => {
-//   res.render('registration.ejs');
-// });
 
 // create new account route
 router.post('/registration', async (req, res, next) => {
@@ -24,11 +21,8 @@ router.post('/registration', async (req, res, next) => {
 
       // adding the user to the db
       const createdAccount = await User.create(accountDbEntry)
-      console.log(createdAccount)
-      console.log('is this hitting?');
 
-
-      res.redirect('/featureditems');
+      res.redirect('/');
 
     } catch (err) {
         next(err);

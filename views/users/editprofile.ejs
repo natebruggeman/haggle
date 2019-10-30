@@ -16,7 +16,7 @@
       </nav>
     </header>
     <h1>Edit your Profile</h1>
-    <form action="/profile/<%=user.id%>?_method=PUT" method="POST">
+    <form action="/profile/<%=userId%>?_method=PUT" method="POST">
       <input type="text" name="name" value="<%=user.name%>"><br>
       <input type="text" name="username" value="<%=user.username%>"><br>
       <input type="email" name="email" value="<%=user.email%>"><br>
@@ -24,7 +24,7 @@
       <button type="submit">Save Current Changes</button>
     </form>
     <section>
-      <form action="/profile/<%=user._id%>?_method=DELETE" method="POST">
+      <form action="/profile/<%=userId%>?_method=DELETE" method="POST">
         <button type="submit" name="delete">Delete Profile</button>
       </form>
     </section>

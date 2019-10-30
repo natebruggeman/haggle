@@ -20,9 +20,10 @@ router.get('/', async (req, res) => {
 
 router.get('/new', (req, res) => {
   try{
-  
+
   res.render('items/sell.ejs',{
-    userId: req.session.userId
+    userId: req.session.userId,
+    user: foundUser
   });
   } catch(err) {
     next(err)
