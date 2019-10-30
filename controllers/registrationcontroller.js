@@ -28,43 +28,11 @@ router.post('/registration', async (req, res, next) => {
       console.log('is this hitting?');
 
 
-      req.session.anyProperty = 'any name';
-      req.session.isLogged = true;
-      // req.session.userId =
-      // req.session.username =
-
-      console.log(req.session);
-
       res.redirect('/featureditems');
 
     } catch (err) {
         next(err);
     }
-
-  try {
-    //hashing user password
-    const password = req.body.password;
-    const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-
-    // db object creation for user
-    const accountDbEntry = {};
-    accountDbEntry.name = req.body.name;
-    accountDbEntry.username = req.body.username;
-    accountDbEntry.email = req.body.email;
-    accountDbEntry.password = hashedPassword;
-
-    // adding the user to the db
-    const createdAccount = await User.create(accountDbEntry)
-    console.log(createdAccount)
-    console.log('is this hitting?');
-    req.session.anyProperty = 'any name';
-    req.session.isLogged = true;
-    res.redirect('/featureditems');
-    console.log(req.session);
-
-  } catch (err) {
-    next(err);
-  }
 
 });
 router.post('/login', async (req, res, next) => {
@@ -81,12 +49,14 @@ router.post('/login', async (req, res, next) => {
         req.session.message = '';
 
         req.session.username = foundUser.username;
-        req.session.logged = true;
+        req.session.userId = foundUser.id;
+        req.session.isLoggedIn = true;
+
+        console.log(req.session);
 
         res.redirect('/featureditems')
 
       } else {
-        // if the passwords don't match
         req.session.message = 'Username or password is incorrect';
         res.redirect('/');
       }
