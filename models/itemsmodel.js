@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const itemSchema = new mongoose.Schema({
 	title: String,
 	price: String,
-	description: String
+	description: String,
+	image: String,
+	seller: String
 });
 
 

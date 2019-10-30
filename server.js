@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
-
 const PORT = 3000;
 
 require('./db/db');
@@ -17,6 +16,8 @@ app.use(session({
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: false}));
 
+
+
 const registrationController = require('./controllers/registrationcontroller.js');
 app.use('/auth', registrationController);
 
@@ -25,6 +26,9 @@ app.use('/featureditems', itemController);
 
 const userController = require('./controllers/usercontroller.js');
 app.use('/profile', userController);
+
+
+
 
 
 app.get('/', (req, res) => {
