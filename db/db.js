@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // create our db and connect
-const connectionString = 'mongodb://localhost/haggle';
+const connectionString = process.env.MONGODB_URI;
 
 mongoose.connect(connectionString, {
   useNewUrlParser: true,

@@ -1,3 +1,7 @@
+//require dotenv at the absolute beginning
+require('dotenv').config();
+console.log(process.env);
+
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -8,7 +12,7 @@ const PORT = 3000;
 require('./db/db');
 
 app.use(session({
-  secret: "ejs is for the birds",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }));
