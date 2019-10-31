@@ -1,13 +1,63 @@
 body {
-	background-color: red;
+	background-color: rgba(46, 196, 182, 1);
 }
 div {
-	background-color: red;
+	background-color: rgba(231, 29, 54, 1);
+	font-family: Verdana;
+	border: 9px double rgba(1, 22, 39, 1);
+	text-align: center;
 
 }
 li {
 	background-color: blue;
 }
+
+button {
+	
+	color: white;
+	background-color: rgba(1, 22, 39, 1);
+	font-size: 20px;
+	padding: 17px;
+	line-height: 20px;
+	margin: 10px;
+}
+
+nav {
+	background-color: rgb(192,192,192);
+	font-family: Verdana;
+	text-align: right;
+	padding-right: 25px;
+	font-size: 20px;
+	font-weight: bold;
+	/*border-bottom: 9px double rgba(1, 22, 39, 1);*/
+	margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #mySidenav a {
   position: absolute;
   left: -80px;

@@ -15,20 +15,24 @@
 			</ul>
 		</nav>
 	</header>
-	<h1> Make a sale listing</h1>
+	<div class="container" class="text-center" class="form-group">
+		<br/>
+		<h1> List Your Item</h1>
+		<hr>
 
-	<form action= "/featureditems" method="POST"><br/>
-		<input type="text" name="title" placeholder="Item"><br/>
+		<form action= "/featureditems" method="POST"><br/>
+			<input type="text" name="title" placeholder="Item" class="form-control"><br/>
 
-		<input type="text" name="seller" value="<%=username%>" readonly><br/>
+			<input type="text" name="seller" value="<%=username%>" class="form-control"readonly><br/>
 
-		<input type="number" name="price" placeholder="List Price"><br/>
+			<input type="number" name="price" placeholder="List Price"class="form-control"><br/>
 
-		<input type="text" name="image" placeholder="Image URL"><br/>
+			<input type="text" name="image" placeholder="Image URL"class="form-control"><br/>
 
-		<textarea name="description" placeholder="Description (Optional)"></textarea><br/>
-		
-		<input type="submit" value="List Item for Sale">
-	</form>
+			<textarea name="description" placeholder="Description (Optional)"class="form-control"></textarea><br/>
+			
+			<button type="submit" value="List Item for Sale"> List Item for Sale</button>
+		</form>
+	</div>
 </body>
 </html>
