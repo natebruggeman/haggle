@@ -1,2 +1,5 @@
 node_modules
 
+.env
+
+mongodb+srv://njbruggeman:<password>@cluster0-uuki6.mongodb.net/test?retryWrites=true&w=majority
