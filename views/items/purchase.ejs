@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Haggle</title>
+    <%- include ../head.ejs %>
   </head>
-  <body
+  <body>
   <header>
     <nav>
       <ul id='navmenu'>
@@ -14,7 +15,6 @@
         <a href="/auth/logout">Logout</a>
       </ul>
     </nav>
-
   </header>
     <main>
       <form action="/featureditems/?_method=PUT" method="POST">

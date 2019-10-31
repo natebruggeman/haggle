@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Haggle - List Item</title>
+	<%- include ../head.ejs %>
 </head>
 <body>
-	<nav>
-		<ul id='navmenu'>
-			<a href="/featureditems">Home</a>
-			<a href="/featureditems/new">Sell</a>
-			<a href="/profile/<%=userId%>">Profile</a>
-			<a href="/auth/logout">Logout</a>
-		</ul>
-	</nav>
+	<header>
+		<nav>
+			<ul id='navmenu'>
+				<a href="/featureditems">Home</a>
+				<a href="/featureditems/new">Sell</a>
+				<a href="/profile/<%=userId%>">Profile</a>
+				<a href="/auth/logout">Logout</a>
+			</ul>
+		</nav>
+	</header>
 	<h1> Make a sale listing</h1>
 
 	<form action= "/featureditems" method="POST"><br/>
