@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body
+  <header>
+    <nav>
+      <ul id='navmenu'>
+        <a href="/featureditems">Home</a>
+        <a href="/featureditems/new">Sell</a>
+        <a href="/profile/">Profile</a>
+        <a href="/auth/logout">Logout</a>
+      </ul>
+    </nav>
+
+  </header>
+    <main>
+      <form action="/featureditems/?_method=PUT" method="POST">
+        <select name="paymentName">
+            <option value="visa">Stripe1</option>
+            <option value="mastercard">Stripe2</option>
+            <option value="venmo">Stripe3</option>
+            <option value="paypal">Stripe4</option>
+        </select><br/>
+    </main>
+  </body>
+</html>

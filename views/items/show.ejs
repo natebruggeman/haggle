@@ -5,7 +5,7 @@
 
 </head>
 <body>
-	
+
 	<header>
 		<nav>
 			<ul id='navmenu'>
@@ -37,10 +37,11 @@
 		</form>
 	</section>
 	<%} else {%>
+		<a href="/featureditems/buy">Buy</a>
 
-		<form action = "/featureditems/<%= item.id%>?_method=POST/buy" method="POST">
+		<!-- <form action = "/featureditems/<%= item.id%>?_method=POST/buy" method="POST">
 			<button type="submit">Buy Now!</button>
-		</form>
+		</form> -->
 
 	<%}%>
 

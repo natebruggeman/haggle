@@ -30,6 +30,10 @@ router.get('/new', (req, res) => {
   }
 });
 
+router.get('/buy', (req, res) => {
+  res.render('items/purchase.ejs');
+
+});
 
 router.post('/', async (req, res) => {
 	try{
