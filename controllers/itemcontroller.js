@@ -10,7 +10,8 @@ router.get('/', async (req, res) => {
     const foundItems = await Item.find({});
     res.render('items/featureditems.ejs', {
       items: foundItems,
-      userId: req.session.userId
+      userId: req.session.userId,
+      username: req.session.username
     })
   } catch(err) {
     res.send(err);
@@ -18,7 +19,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/new', (req, res) => {
+router.get('/new', async (req, res) => {
   try{
 
   res.render('items/sell.ejs',{
@@ -30,13 +31,32 @@ router.get('/new', (req, res) => {
   }
 });
 
-router.get('/buy', (req, res) => {
-  res.render('items/purchase.ejs');
+router.get('/:id/buy', async (req, res) => {
+  try{
+    const foundItem = await Item.findById(req.params.id)
 
+    res.render('items/purchase.ejs', {
+      item: foundItem,
+      userId: req.session.userId,
+      username: req.session.username
+    })
+  } catch(err) {
+      next(err)
+    }
 });
 
-router.get('/confirmation', (req, res) => {
-  res.render('items/confirmation.ejs')
+router.get('/:id/confirmation', async (req, res) => {
+  try{
+    const foundItem = await Item.findById(req.params.id)
+
+  res.render('items/confirmation.ejs', {
+      item: foundItem,
+      userId: req.session.userId,
+      username: req.session.username
+    })
+  } catch(err) {
+      next(err)
+    }
 });
 
 router.post('/', async (req, res) => {
@@ -70,7 +90,8 @@ router.get('/:id/edit', async (req, res) => {
 
     res.render('items/edit.ejs', {
       item: foundItem,
-      userId: req.session.userId
+      userId: req.session.userId,
+      username: req.session.username
     })
   } catch(err) {
     next(err)

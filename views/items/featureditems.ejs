@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  
+  <head>
     <%- include ../head.ejs %>
     <meta charset="utf-8">
     <title>Haggle</title>
   </head>
 
-  
   <body>
     <header>
       <nav>
         <ul id='navmenu'>
           <a href="/featureditems">Home</a>
           <a href="/featureditems/new">Sell</a>
-          <a href="/profile/<%=userId%>">Profile</a>
+          <a href="/profile/<%=userId%>"><%=username%></a>
           <a href="/auth/logout">Logout</a>
         </ul>
       </nav>
@@ -23,12 +22,8 @@
       <div id="mySidenav" class="sidenav">
         <a href="#" id="Sports">Sports</a>
         <a href="#" id="Electronics">Electronics</a>
-        <a href="#" id="Home">Home and Garden</a>
+        <a href="#" id="Home">Home</a>
         <a href="#" id="Automotive">Automotive</a>
-      </div>
-      <div style="margin-left:80px;">
-        <h2>Hoverable Sidenav Buttons</h2>
-        <p>Hover over the buttons in the left side navigation to open them.</p>
       </div>
     </section>
     <main>

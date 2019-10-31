@@ -1,4 +1,4 @@
-body {
+/* body {
 	background-color: red;
 }
 div {
@@ -7,7 +7,7 @@ div {
 }
 li {
 	background-color: blue;
-}
+} */
 #mySidenav a {
   position: absolute;
   left: -80px;

@@ -1,6 +1,6 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head> -->
+  <head>
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -10,12 +10,20 @@
       <ul id='navmenu'>
         <a href="/featureditems">Home</a>
         <a href="/featureditems/new">Sell</a>
-        <a href="/profile/">Profile</a>
+        <a href="/profile/<%=userId%>"><%=username%></a>
         <a href="/auth/logout">Logout</a>
       </ul>
     </nav>
   </header>
     <main>
+      <title></title>
+    	<h1>Item Name</h1>
+
+    	<h3>Product: <%=item.title%></h3>
+    	<h4>Seller: <%=item.seller%></h4>
+    	<h3>Cost: $<%=item.price%></h3>
+    	<img src="<%=item.image%>" style= width:225px;height300px>
+
       <form action="/featureditems/?_method=PUT" method="POST">
         <select name="paymentName">
           <option value="visa">VISA</option>
@@ -58,7 +66,7 @@
         </form>
       </section>
       <section>
-        <a href="/featureditems/confirmation"class= "btn btn-info" role="button">Confirm Purchase</a>
+        <a href="/featureditems/<%=item.id%>/confirmation"class= "btn btn-info" role="button">Confirm Purchase</a>
       </section>
     </main>
   </body>

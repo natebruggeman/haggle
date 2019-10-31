@@ -1,21 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Item = require('../models/itemsmodel.js');
-const User = require('../models/users.js')
-
-// router.get("/", (req, res, next) => {
-//   User.findById(req.params.id, (err, foundUser) => {
-//     console.log(foundUser);
-//     console.log('this is foundUser');
-//     if (err) {
-//       next(err);
-//     } else {
-//       res.render('users/profile.ejs', {
-//         user: foundUser
-//       })
-//     }
-//   })
-//  });
+const User = require('../models/users.js');
 
 // show profile route
 router.get("/:id", (req, res, next) => {
@@ -25,7 +11,9 @@ router.get("/:id", (req, res, next) => {
       next(err);
     } else {
       res.render('users/profile.ejs', {
-        user: foundUser
+          userId: req.session.userId,
+          username: req.session.username,
+          email: req.session.email
       });
     }
   })
@@ -42,7 +30,8 @@ router.get('/:id/edit', (req, res, next) => {
     } else {
       res.render('users/editprofile.ejs', {
         userId: req.session.userId,
-        user: foundUser
+        username: req.session.username,
+        email: req.session.email
       })
     }
   })

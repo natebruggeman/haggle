@@ -11,32 +11,32 @@
         <ul id='navmenu'>
           <a href="/featureditems">Home</a>
           <a href="/featureditems/new">Sell</a>
-          <a href="/profile/<%=user.id%>">Profile</a>
+          <a href="/profile/<%=userId%>"><%=username%></a>
           <a href="/auth/logout">Logout</a>
         </ul>
       </nav>
     </header>
-    <h1>This is <%=user.name%>'s Profile Page</h1>
+    <h1>This is <%=username%>'s Profile Page</h1>
     <ul id='profilenav'>
       <div class="editprofile">
-        <a href="/profile/<%=user.id%>/edit">Change Name</a>
+        <a href="/profile/<%=userId%>/edit">Change Name</a>
       </div>
       <div class="editprofile">
-        <a href="/profile/<%=user.id%>/edit">Change Username</a>
+        <a href="/profile/<%=userId%>/edit">Change Username</a>
 
       </div>
       <div class="editprofile">
-        <a href="/profile/<%=user.id%>/edit">Change Email Address</a>
+        <a href="/profile/<%=userId%>/edit">Change Email Address</a>
 
       </div>
       <div class="editprofile">
-        <a href="/profile/<%=user.id%>/edit">Change Payment Info</a>
+        <a href="/profile/<%=userId%>/edit">Change Payment Info</a>
       </div>
       <div class="">
         <a href="/profile/transactionshow">View Transaction History</a>
       </div>
       <div class="editprofile">
-        <a href="/profile/<%=user.id%>/edit">Change Current Location</a>
+        <a href="/profile/<%=userId%>/edit">Change Current Location</a>
       </div>
     </ul>
   </body>

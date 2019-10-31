@@ -1,8 +1,0 @@
-<nav>
-  <ul id='navmenu'>
-    <a href="/featured">Home</a>
-    <a href="/buy">Buy</a>
-    <a href="/sell">Sell</a>
-    <a href="/profile">profile</a>
-  </ul>
-</nav>
