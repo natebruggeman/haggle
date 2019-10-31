@@ -2,10 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Haggle</title>
-    <%- include ../head.ejs %>
+    <title></title>
   </head>
-  <body>
+  <body
   <header>
     <nav>
       <ul id='navmenu'>
@@ -15,15 +14,53 @@
         <a href="/auth/logout">Logout</a>
       </ul>
     </nav>
+
   </header>
     <main>
       <form action="/featureditems/?_method=PUT" method="POST">
         <select name="paymentName">
-            <option value="visa">Stripe1</option>
-            <option value="mastercard">Stripe2</option>
-            <option value="venmo">Stripe3</option>
-            <option value="paypal">Stripe4</option>
+          <option value="visa">VISA</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="venmo">Venmo</option>
+          <option value="paypal">PayPal</option>
         </select><br/>
+      </form>
+      <section>
+        <form class="cardinfo" action="/featureditems/?_method=PUT" method="POST">
+          <input type="text" name="name" placeholder="Full Name on Card">
+          <input type="number" name="cardnumber" value="CC Number" placeholder="CC Number">
+          <select class="expire" name="expireMonth" placeholder="Mm">
+            <option value="0">Mm</option>
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+            <option value="3">Mar</option>
+            <option value="4">Apr</option>
+            <option value="5">May</option>
+            <option value="6">Jun</option>
+            <option value="7">Jul</option>
+            <option value="8">Aug</option>
+            <option value="9">Sep</option>
+            <option value="10">Oct</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>1
+          </select>
+          <select class="expire" name="expireYear" placeholder="Yy">
+            <option value="Yy">Yy</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+          </select>
+          <input type="text"  name="CCV" placeholder="CCV here" style=width:60px>
+        </form>
+      </section>
+      <section>
+        <a href="/featureditems/confirmation"class= "btn btn-info" role="button">Confirm Purchase</a>
+      </section>
     </main>
   </body>
 </html>

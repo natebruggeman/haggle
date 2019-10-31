@@ -35,6 +35,10 @@ router.get('/buy', (req, res) => {
 
 });
 
+router.get('/confirmation', (req, res) => {
+  res.render('items/confirmation.ejs')
+});
+
 router.post('/', async (req, res) => {
 	try{
 		const createdItem = await Item.create(req.body)

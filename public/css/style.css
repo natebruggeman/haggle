@@ -8,3 +8,38 @@ div {
 li {
 	background-color: blue;
 }
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#Sports {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+#Electronics {
+  top: 80px;
+  background-color: #2196F3;
+}
+
+#Home {
+  top: 140px;
+  background-color: #f44336;
+}
+
+#Automotive {
+  top: 200px;
+  background-color: #555
+}
