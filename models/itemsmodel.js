@@ -5,13 +5,11 @@ const itemSchema = new mongoose.Schema({
 	price: String,
 	description: String,
 	image: String,
-	seller: String
+	seller: String,
+	category: String
 });
 
 
 const Item = mongoose.model('Item', itemSchema);
 
 module.exports = Item;
-
-
-
