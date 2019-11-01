@@ -21,21 +21,22 @@
 
 
         <section>
-          <div>
+          <div class="container">
             <h3>
               <a href="/featureditems/sports" id="Sports">Sports</a>
               <a href="/featureditems/electronics" id="Electronics">Electronics</a>
               <a href="/featureditems/home" id="Home">Home</a>
-              <a href="/featureditems/miscellaneous">misc</a>
+              <a href="/featureditems/miscellaneous">Miscellaneous</a>
             </h3> 
           </div> 
+          <br/>
         </section>
 
 
 <!--   <div class="container">
     <div class="row"> -->
     <main>
-      <div>
+      <div class="container">
       <ul class="list-unstyled">
         <% for (let i = 0; i < items.length; i++){%>
 
@@ -46,8 +47,9 @@
               </h4></li>
              <li><h4>$<%=items[i].price %></h4></li>
 
-
+             <div class="featuredphotos">
              <li><img src="<%=items[i].image%>" style= width:150px;height200px></li>
+             </div>
              <br/><hr>
         <%}%>
       </ul>
