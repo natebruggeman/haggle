@@ -82,6 +82,7 @@ nav {
 .col-md-4{
 	background-color: white;
 	border: 2px solid rgba(1, 22, 69, .5);
+	vertical-align: center;
 }
 
 #login{
@@ -109,6 +110,13 @@ input{
   font-size: 20px;
   color: white;
   border-radius: 0 5px 5px 0;
+}
+
+.showimage {
+	margin: calc(50% - 100px) auto;
+}
+.featuredimage{
+	border: 9px double rgba(1, 22, 69, .75);
 }
 
 /*#mySidenav a:hover {
