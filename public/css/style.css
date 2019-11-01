@@ -28,9 +28,12 @@ body {
 	margin: 10px;
 
 }
-/*.haggle{
+.border{
+	border: 19px double rgba(1, 22, 69, 1);
+}
+.container{
 	border: 9px double rgba(1, 22, 69, 1);
-}*/
+}
 
 div{
 	background-color: rgba(231, 29, 54, 1);
@@ -59,12 +62,13 @@ nav {
 	padding-right: 25px;
 	font-size: 20px;
 	font-weight: bold;
-	 /*border-bottom: 5px solid rgba(1, 22, 39, 1);*/*/
-	padding-bottom: 10px;
+	border-bottom: 2px solid rgba(1, 22, 69, 1);
+	margin-bottom: 10px;
 }
 
 .col-md-4{
 	background-color: white;
+	border: 2px solid rgba(1, 22, 69, .5);
 }
 
 #login{
