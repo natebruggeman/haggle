@@ -36,7 +36,12 @@ body {
 	text-align: center;
 
 }
-
+.btn{
+	margin-top: 10px;
+}
+.hags{
+	color: white;
+}
 div{
 	background-color: #94A8B4;
 	font-family: Verdana;
