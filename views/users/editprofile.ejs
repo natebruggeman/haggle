@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Haggle - Edit Profile</title>
-    <%- include ../head.ejs %>
-    <title> Edit Profile </title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul id='navmenu'>
-          <a href="/featureditems">Home</a>
-          <a href="/featureditems/new">Sell</a>
-          <a href="/profile/<%=userId%>"><%=username%></a>
-          <a href="/auth/logout">Logout</a>
-        </ul>
-      </nav>
-    </header>
+
+<head>
+  <meta charset="utf-8">
+  <title>Haggle - Edit Profile</title>
+  <%- include ../head.ejs %>
+  <title> Edit Profile </title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul id='navmenu'>
+        <a href="/featureditems">Home</a>
+        <a href="/featureditems/new">Sell</a>
+        <a href="/profile/<%=user.id%>">Profile</a>
+        <a href="/auth/logout">Logout</a>
+      </ul>
+    </nav>
+  </header>
+  <div class="container" class="text-center" class="form-group">
+    </br>
+
     <h1>Edit your Profile</h1>
+    <hr>
     <form action="/profile/<%=userId%>?_method=PUT" method="POST">
       <input type="text" name="name" value="<%=username%>"><br>
       <input type="text" name="username" value="<%=username%>"><br>
@@ -25,10 +30,13 @@
       <input type="password" name="password" value="********"><br>
       <button type="submit">Save Current Changes</button>
     </form>
+
+
     <section>
       <form action="/profile/<%=userId%>?_method=DELETE" method="POST">
         <button type="submit" name="delete">Delete Profile</button>
       </form>
     </section>
-  </body>
+  </div>
+</body>
 </html>

@@ -1,18 +1,31 @@
 <%- include ./head.ejs %>
-    <meta charset="utf-8">
-    <title>Login</title>
-  </head>
-  <body>
-    <h1>Login Page</h1>
-      <main>
-        <form action="/auth/login" method="POST">
-          <input type="text" name="username" placeholder="Enter Username here">
-          <input type="text" name="password" placeholder="Enter Password here">
-          <input type="submit" name="loginbut" value="Login">
-        </form>
-      </main>
+<meta charset="utf-8">
+<title>Login</title>
+</head>
+<body>
+  <main>
+    <div id="banner">
+      <h1> Haggle </h1>
+    </div>
+    <div class="container" class="text-center" class="form-group" id="login">
+      <br/>
+      <h1>Login Page</h1>
+      <hr>
+
+      <form action="/auth/login" method="POST">
+
+        <input type="text" name="username" placeholder="Enter Username here"  style= width:280px><br/>
+
+        <input type="text" name="password" placeholder="Enter Password here" style= width:280px><br/>
+
+        <button type="submit" style= width:280px>Login</button>
+      </form>
+      
+
       <section>
         <a href="/registration">Not yet a registered user? Click  here to register!</a>
       </section>
-  </body>
+    </div>
+  </main>
+</body>
 </html>

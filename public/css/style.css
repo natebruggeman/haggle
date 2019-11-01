@@ -1,25 +1,38 @@
 body {
 	background-color: rgba(46, 196, 182, 1);
 }
+#banner{
+	background-color: rgb(192,192,192);
+	border-bottom: 2px solid rgba(1, 22, 69, 1);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-radius: 0px;
+	margin-bottom: 10px;
+	text-align: left;
+	padding-left: 120px;
+}
+
+
+
 div {
 	background-color: rgba(231, 29, 54, 1);
 	font-family: Verdana;
 	border: 9px double rgba(1, 22, 39, 1);
 	text-align: center;
+	border-radius: 10px;
 
 }
-li {
-	background-color: blue;
-}
+
 
 button {
-	
 	color: white;
 	background-color: rgba(1, 22, 39, 1);
 	font-size: 20px;
 	padding: 17px;
 	line-height: 20px;
 	margin: 10px;
+	border-radius: 10px;
 }
 
 nav {
@@ -29,32 +42,26 @@ nav {
 	padding-right: 25px;
 	font-size: 20px;
 	font-weight: bold;
-	/*border-bottom: 9px double rgba(1, 22, 39, 1);*/
-	margin-bottom: 10px;
+	 /*border-bottom: 5px solid rgba(1, 22, 39, 1);*/*/
+	padding-bottom: 10px;
 }
 
+.col-md-4{
+	background-color: white;
+}
 
+#login{
+	text-align: center;
+	align-content: center;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+input{
+	padding: 6px;
+	font-size: 20px;
+	border-radius: 10px;
+	margin: 10px;
+}
 
 
 
