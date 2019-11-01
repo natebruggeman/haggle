@@ -1,5 +1,6 @@
 body {
 	background-color: rgba(46, 196, 182, 1);
+	text-align: center;
 }
 #banner{
 	background-color: rgb(192,192,192);
@@ -13,12 +14,28 @@ body {
 	padding-left: 120px;
 }
 
+.expire{
+	padding: 6px;
+	font-size: 20px;
+	border-radius: 10px;
+	margin: 10px;
 
+}
+.cardtype{
+	padding: 6px;
+	font-size: 20px;
+	border-radius: 10px;
+	margin: 10px;
 
-div {
+}
+/*.haggle{
+	border: 9px double rgba(1, 22, 69, 1);
+}*/
+
+div{
 	background-color: rgba(231, 29, 54, 1);
 	font-family: Verdana;
-	border: 9px double rgba(1, 22, 39, 1);
+	/*border: 9px double rgba(1, 22, 69, 1);*/
 	text-align: center;
 	border-radius: 10px;
 
@@ -27,7 +44,7 @@ div {
 
 button {
 	color: white;
-	background-color: rgba(1, 22, 39, 1);
+	background-color: rgba(1, 22, 69, 1);
 	font-size: 20px;
 	padding: 17px;
 	line-height: 20px;
@@ -77,7 +94,7 @@ input{
   border-radius: 0 5px 5px 0;
 }
 
-#mySidenav a:hover {
+/*#mySidenav a:hover {
   left: 0;
 }
 
@@ -99,4 +116,4 @@ input{
 #Automotive {
   top: 200px;
   background-color: #555
-}
+}*/

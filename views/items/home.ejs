@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+  <%- include ../head.ejs %>
     <meta charset="utf-8">
     <title>Home Items</title>
   </head>
@@ -15,20 +13,27 @@
         </ul>
       </nav>
     </header>
-    <h1>Home Items</h1>
-    <ul>
-      <% for (let i = 0; i < items.length; i++){%>
-        <% if (items[i].category === 'home') { %>
-           <li>
-            <a href="/featureditems/<%=items[i].id%>">
-            <%=items[i].title %>
-           </a></li>
-           <li>$<%=items[i].price %></li>
-           <img src="<%=items[i].image%>" style= width:225px;height300px>
-           <li><%=items[i].description %></li><br/>
-       <% } %>
-      <%}%>
-    </ul>
+    <div class="container" class="text-center" class="form-group">
+      </br>
+      <h1>Home Items</h1>
+      <hr>
+      <ul class="list-unstyled">
+        <% for (let i = 0; i < items.length; i++){%>
+          <% if (items[i].category === 'home') { %>
+
+
+             <li>
+              <a href="/featureditems/<%=items[i].id%>">
+              <h1><%=items[i].title %></h1>
+             </a></li>
+             <li><h3>$<%=items[i].price %></h3></li>
+             <li><h3><%=items[i].description %></h3></li><br/>
+             <img src="<%=items[i].image%>" style= width:225px;height300px>
+             <hr></br>
+         <% } %>
+        <%}%>
+      </ul>
+     </div> 
 
   </body>
 </html>

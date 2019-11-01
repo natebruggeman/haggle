@@ -17,30 +17,43 @@
         </ul>
       </nav>
     </header>
-    <h1>Main</h1>
-    <section class="sidebar">
-      <div id="mySidenav" class="sidenav">
-        <a href="/featureditems/sports" id="Sports">Sports</a>
-        <a href="/featureditems/electronics" id="Electronics">Electronics</a>
-        <a href="/featureditems/home" id="Home">Home</a>
-        <a href="/featureditems/miscellaneous" ">misc</a>
-      </div>
+      <h1><p>Welcome to Haggle!</p></h1>
 
-    </section>
+
+        <section>
+          <div>
+            <h3>
+              <a href="/featureditems/sports" id="Sports">Sports</a>
+              <a href="/featureditems/electronics" id="Electronics">Electronics</a>
+              <a href="/featureditems/home" id="Home">Home</a>
+              <a href="/featureditems/miscellaneous">misc</a>
+            </h3> 
+          </div> 
+        </section>
+
+
+<!--   <div class="container">
+    <div class="row"> -->
     <main>
-      <p>This will be our main page!!</p>
-
-      <ul>
+      <div>
+      <ul class="list-unstyled">
         <% for (let i = 0; i < items.length; i++){%>
-             <li>
+
+             <li><h4>
               <a href="/featureditems/<%=items[i]._id%>">
               <%=items[i].title %>
-             </a></li>
-             <li>$<%=items[i].price %></li>
-             <li><%=items[i].description %></li><br/>
+             </a>
+              </h4></li>
+             <li><h4>$<%=items[i].price %></h4></li>
+
+
+             <li><img src="<%=items[i].image%>" style= width:150px;height200px></li>
+             <br/><hr>
         <%}%>
       </ul>
-
+<!--     </div>
+  </div>  --> 
+      </div>
     </main>
   </body>
 </html>

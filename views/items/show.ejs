@@ -1,9 +1,6 @@
-<!-- <!DOCTYPE html>
-<html>
-<head> -->
 
-	<%- include ../head.ejs %>
-	<title> Haggle </title>
+<%- include ../head.ejs %>
+<title> Haggle </title>
 </head>
 <body>
 
@@ -21,6 +18,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
+				<br/>
 				<h1><%=item.title%></h1>
 				<hr>
 
@@ -32,28 +30,33 @@
 				<img src="<%=item.image%>" style= width:225px;height300px>
 			</div>
 		</div>
-	</div>
 
 
 
-	<% if(item.seller === username) {%>
-	<section>
-		<a href="/featureditems/<%=item.id%>/edit">Edit</a>
-	</section>
+		<% if(item.seller === username) {%>
+			<section>
+				<form action="/featureditems/<%=item.id%>/edit">
+					<button type="submit">Edit</button>
+				</form>
+			</section>
 
-	<section>
-		<form action = "/featureditems/<%= item.id%>?_method=DELETE" method="POST">
-			<button type="submit">Delete Listing</button>
-		</form>
-	</section>
-	<%} else {%>
-		<a href="/featureditems/<%=item.id%>/buy" class= "btn btn-info" role="button" >Buy</a>
+			<section>
+				<form action = "/featureditems/<%= item.id%>?_method=DELETE" method="POST">
+					<button type="submit">Delete Listing</button>
+				</form>
+			</section>
+			<%} else {%>
 
-		<!-- <form action = "/featureditems/<%= item.id%>?_method=POST/buy" method="POST">
-			<button type="submit">Buy Now!</button>
-		</form> -->
 
-	<%}%>
+			<section>
+				<form action="/featureditems/<%=item.id%>/buy">
+					<button type="submit">Buy Now
+					</button>
+				</form>
+			</section>
+
+<%}%>
+</div>
 
 </body>
 </html>

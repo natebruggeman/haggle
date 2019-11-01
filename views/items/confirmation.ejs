@@ -1,21 +1,35 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+  <%- include ../head.ejs %>  
     <title>Confirmation</title>
   </head>
   <body>
-    <h1>Brilliant Success! Purchase confirmed!</h1>
+    <header>
+      <nav>
+        <ul id='navmenu'>
+          
+          <a href="/featureditems">Home</a>
+          <a href="/featureditems/new">Sell</a>
+          <a href="/profile/<%=userId%>"><%=username%></a>
+          <a href="/auth/logout">Logout</a>
+        </ul>
+      </nav>
+    </header>
+    <h1>Purchase confirmed! Thanks for Haggling!</h1>
       <div class="purchasedItemBox">
-        <div>
-          <p><%=item.title%> for $<%=item.price%></p>
-        </div>
-      </div>
+        <p>
+          <h1><%=item.title%> for $<%=item.price%></h1>
+        </p>
+        <hr>
+        
+        <img src="https://di-uploads-pod5.dealerinspire.com/autocitysd/uploads/2016/11/goautocity-54color-1024x576.jpg" alt="haggle" style= width:600px;height450px>
+        <br/>
+        
       <section>
-        <a href="/featureditems"class= "btn btn-info" role="button">Want to Haggle some more?</a>
+        <form action = "/featureditems/">
+          <button type="submit">Haggle some more!</button>
+        </form>
       </section>
-      <div class="">
-        <img src="https://di-uploads-pod5.dealerinspire.com/autocitysd/uploads/2016/11/goautocity-54color-1024x576.jpg" alt="haggle">
       </div>
+      
+      
   </body>
 </html>
