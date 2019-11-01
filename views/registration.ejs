@@ -3,9 +3,14 @@
     <title>Login / Registration</title>
   </head>
   <body>
-    <h1> Register and Login</h1>
+    <div id="banner">
+      <h1> Haggle </h1>
+    </div>
       <main>
-        <h4>Register an Account</h4>
+        <div class="container" class="text-center" class="form-group" id="registration">
+        <br/>
+        <h1>Register an Account</h1>
+        <hr>
           <form action="/auth/registration" method="POST">
             <input type="text" name="name" placeholder="given name"><br>
 
@@ -17,9 +22,9 @@
             
             <button type="submit">Register</button>
           </form>
-      </main>
       <section>
         <a href="/">Already a registered user? Log In Here!</a>
       </section>
+      </main>
   </body>
 </html>
