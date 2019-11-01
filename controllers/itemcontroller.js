@@ -62,15 +62,73 @@ router.get('/:id/confirmation', async (req, res) => {
 router.post('/', async (req, res) => {
 	try{
 		const createdItem = await Item.create(req.body)
+    console.log(createdItem);
 		res.redirect('/featureditems')
 	} catch(err) {
 		next(err)
 	}
 })
 
+router.get('/sports', async (req, res, next) => {
+  try {
+    const foundItems = await Item.find({});
+    console.log(foundItems);
+    console.log('this is foundItems');
+    res.render('items/sports.ejs', {
+      items: foundItems,
+      userId: req.session.userId,
+      username: req.session.username
+    });
+  } catch(err) {
+    next(err)
+  }
+});
 
+router.get('/miscellaneous', async (req, res, next) => {
+  try {
+    const foundItems = await Item.find({});
+    console.log(foundItems);
+    console.log('this is foundItems');
+    res.render('items/miscellaneous.ejs', {
+      items: foundItems,
+      userId: req.session.userId,
+      username: req.session.username
+    });
+  } catch(err) {
+    next(err)
+  }
+});
+router.get('/electronics', async (req, res, next) => {
+  try {
+    const foundItems = await Item.find({});
+    console.log(foundItems);
+    console.log('this is foundItems');
+    res.render('items/electronics.ejs', {
+      items: foundItems,
+      userId: req.session.userId,
+      username: req.session.username
+    });
+  } catch(err) {
+    next(err)
+  }
+});
 
-router.get('/:id', async (req, res) => {
+router.get('/home', async (req, res, next) => {
+  try {
+    const foundItems = await Item.find({});
+    console.log(foundItems);
+    console.log('this is foundItems');
+    res.render('items/home.ejs', {
+      items: foundItems,
+      userId: req.session.userId,
+      username: req.session.username
+    });
+  } catch(err) {
+    next(err)
+  }
+});
+
+router.get('/:id', async (req, res, next) => {
   try {
     const foundItem = await Item.findById(req.params.id)
 
@@ -83,6 +141,7 @@ router.get('/:id', async (req, res) => {
     next(err)
   }
 });
+
 
 router.get('/:id/edit', async (req, res) => {
   try{
